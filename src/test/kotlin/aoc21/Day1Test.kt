@@ -5,8 +5,19 @@ import io.kotest.matchers.shouldBe
 
 class Day1Test: FunSpec({
    test("this is a preparation onlye") {
-       val sample = "hello world"
-       val result = Day1.calculateTODO(sample)
-       result shouldBe sample
+       val sample = """
+           199
+           200
+           208
+           210
+           200
+           207
+           240
+           269
+           260
+           263
+       """.trimIndent()
+       val result = Day1.calculateIncreases(sample)
+       result shouldBe 7
    }
 })
